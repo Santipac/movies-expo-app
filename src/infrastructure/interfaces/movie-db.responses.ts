@@ -1,5 +1,5 @@
 
-export interface NowPlayingResponse {
+export interface GeneralResponse {
     dates:         Dates;
     page:          number;
     results:       Result[];
