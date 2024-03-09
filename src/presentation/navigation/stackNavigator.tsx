@@ -1,4 +1,4 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen } from '../screens/home/homeScreen';
 import { DetailsScreen } from '../screens/details/detailsScreen';
 
@@ -7,7 +7,7 @@ export type RootStackParams = {
   Details: { movieId: number };
 };
 
-const Stack = createNativeStackNavigator<RootStackParams>();
+const Stack = createStackNavigator<RootStackParams>();
 
 export function StackNavigator() {
   return (
