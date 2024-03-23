@@ -16,7 +16,12 @@ export const HomeScreen: React.FC = () => {
 
   return (
     <ScrollView style={styles.container}>
-      <PosterCarousel movies={nowPlaying.data} />
+      {isStatusLoading(nowPlaying.status) || nowPlaying.data === undefined ? (
+        <Text>Cargando estrenos...</Text>
+      ) : (
+        <PosterCarousel movies={nowPlaying.data} />
+      )}
+
       {isStatusLoading(popular.status) || popular.data === undefined ? (
         <Text>Cargando más populares...</Text>
       ) : (
