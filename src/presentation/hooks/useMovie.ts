@@ -8,6 +8,11 @@ export const useMovie = (movieId: number) => {
     queryFn: () => UseCases.getByIdUseCase(movieDBFetcher(), movieId),
   });
 
-  return { movie };
+  const cast = useQuery({
+    queryKey: ['Get cast'],
+    queryFn: () => UseCases.getCast(movieDBFetcher(), movieId),
+  })
+
+  return { movie, cast };
 };
 

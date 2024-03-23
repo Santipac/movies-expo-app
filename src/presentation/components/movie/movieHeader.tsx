@@ -15,7 +15,11 @@ interface MovieHeaderProps {
   title: string;
 }
 
-export const MovieHeader = ({ moviePoster, title, ogTitle }: MovieHeaderProps) => {
+export const MovieHeader = ({
+  moviePoster,
+  title,
+  ogTitle,
+}: MovieHeaderProps) => {
   const { height: screenHeight } = useWindowDimensions();
   const navigation = useNavigation();
   return (
@@ -61,7 +65,7 @@ const styles = StyleSheet.create({
     opacity: 0.8,
   },
   title: {
-    fontSize: 20,
+    fontSize: 23,
     fontWeight: 'bold',
   },
   backButtonCtn: {
